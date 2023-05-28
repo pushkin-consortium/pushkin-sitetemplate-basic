@@ -8,7 +8,7 @@ import { Container } from 'react-bootstrap';
 const FindingsPage = () => {
   return (
     <Container fluid className="text-center">
-      {FindingsData.map(f => {
+      {FindingsData.map((f) => {
         return (
           <FindingsCard
             key={f.id}

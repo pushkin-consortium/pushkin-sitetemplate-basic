@@ -20,9 +20,7 @@ import feedbackPage from './pages/Feedback';
 import dashboardPage from './pages/dashboard/Dashboard';
 import forumPage from './pages/Forum';
 
-
 function App() {
-
   return (
     <div className="App" style={{ minHeight: '100vh', position: 'relative' }}>
       <Header />

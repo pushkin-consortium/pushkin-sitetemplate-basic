@@ -6,24 +6,24 @@ import { Card } from 'react-bootstrap';
 
 const styles = {
   title: {
-    textTransform: 'capitalize'
+    textTransform: 'capitalize',
   },
   card: {
     margin: '20px 0px',
-    padding: '0px 20px'
+    padding: '0px 20px',
   },
   quizTag: {
     width: 'fit-content',
     background: 'lightblue',
     padding: '5px',
     fontSize: '10px',
-    background: 'tomato'
-  }
+    background: 'tomato',
+  },
 };
 
 class ForumContent extends React.Component {
   showAllPosts = () => {
-    return this.props.posts.map(post => {
+    return this.props.posts.map((post) => {
       return (
         <Card key={post.id} style={styles.card}>
           <div>
@@ -44,7 +44,7 @@ class ForumContent extends React.Component {
 }
 
 ForumContent.propTypes = {
-  posts: PropTypes.array
+  posts: PropTypes.array,
 };
 
 export default ForumContent;

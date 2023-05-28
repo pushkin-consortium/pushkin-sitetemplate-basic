@@ -25,14 +25,14 @@ class Forum extends React.Component {
   //   this.props.dispatch(checkLogin());
   // };
   handleLocalPostChange = () => {
-    this.props.dispatch(fetchAllPosts()).then(res => {
+    this.props.dispatch(fetchAllPosts()).then((res) => {
       this.setState({ posts: res });
     });
   };
   executeSearch(q) {
     this.props.dispatch(search(q));
   }
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
     const q = this.refs.search.value;
     this.refs.search.value = '';
@@ -42,7 +42,7 @@ class Forum extends React.Component {
   };
   showResults = () => {
     const { term, results } = this.props;
-    const dispatchClearSearch = _ => this.props.dispatch(clearSearch());
+    const dispatchClearSearch = (_) => this.props.dispatch(clearSearch());
     return (
       <div>
         {/* <SearchResultList
@@ -113,13 +113,13 @@ class Forum extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     posts: state.forum.posts,
     userInfo: state.userInfo.profile,
     formData: state.form,
     results: state.forum.results,
-    term: state.forum.term
+    term: state.forum.term,
   };
 };
 export default connect(mapStateToProps)(Forum);

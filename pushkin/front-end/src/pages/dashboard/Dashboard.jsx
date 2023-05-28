@@ -9,21 +9,21 @@ import { useAuth0 } from '../../utils/react-auth0-spa';
 
 const styles = {
   jumbotron: {
-    backgroundColor: '#3F729B'
+    backgroundColor: '#3F729B',
   },
   avatar: {
     width: '10rem',
-    height: '10rem'
+    height: '10rem',
   },
   card: {
     backgroundColor: '#B7E0F2',
     borderRadius: 55,
-    padding: '3rem'
+    padding: '3rem',
   },
   cardImage: {
     height: '100%',
     objectFit: 'cover',
-    borderRadius: 55
+    borderRadius: 55,
   },
   button: {
     backgroundColor: 'rgba(0,0,0,0)',
@@ -32,8 +32,8 @@ const styles = {
     alignSelf: 'center',
     fontWeight: '500',
     fontSize: 22,
-    cursor: 'pointer'
-  }
+    cursor: 'pointer',
+  },
 };
 
 const Dashboard = () => {
@@ -58,8 +58,8 @@ const Dashboard = () => {
         <Row className="justify-content-center m-1">
           <Button
             onClick={() => {
-              showEditProfile(editProfile => true);
-              showExperimentHistory(experimentHistory => false);
+              showEditProfile((editProfile) => true);
+              showExperimentHistory((experimentHistory) => false);
             }}
             style={styles.button}
           >
@@ -67,8 +67,8 @@ const Dashboard = () => {
           </Button>
           <Button
             onClick={() => {
-              showEditProfile(editProfile => false);
-              showExperimentHistory(experimentHistory => true);
+              showEditProfile((editProfile) => false);
+              showExperimentHistory((experimentHistory) => true);
             }}
             style={styles.button}
           >

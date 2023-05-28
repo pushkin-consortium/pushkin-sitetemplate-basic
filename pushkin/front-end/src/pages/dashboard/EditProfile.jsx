@@ -4,11 +4,11 @@ import { Row, Col, Form, Button } from 'react-bootstrap';
 
 const styles = {
   label: {
-    textAlign: 'left'
-  }
+    textAlign: 'left',
+  },
 };
 
-const EditProfile = props => {
+const EditProfile = (props) => {
   return (
     <Row>
       <Col md={{ span: 6, offset: 3 }}>
@@ -51,7 +51,7 @@ const EditProfile = props => {
             </Form.Control.Feedback>
           </Form.Group>
           <Row className="justify-content-center">
-            <Button type="submit" onClick={e => e.preventDefault()}>
+            <Button type="submit" onClick={(e) => e.preventDefault()}>
               Submit
             </Button>
           </Row>

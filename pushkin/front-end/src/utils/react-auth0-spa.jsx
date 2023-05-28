@@ -6,7 +6,7 @@ import createAuth0Client from '@auth0/auth0-spa-js';
 import { CONFIG } from '../config.js';
 
 var crypto = require('crypto');
-var sha512 = function(id, salt) {
+var sha512 = function (id, salt) {
   var hash = crypto.createHmac('sha512', salt); /** Hashing algorithm sha512 */
   hash.update(id);
   var value = hash.digest('base64');
@@ -92,7 +92,7 @@ export const Auth0Provider = ({
         loginWithRedirect: (...p) => auth0Client.loginWithRedirect(...p),
         getTokenSilently: (...p) => auth0Client.getTokenSilently(...p),
         getTokenWithPopup: (...p) => auth0Client.getTokenWithPopup(...p),
-        logout: (...p) => auth0Client.logout(...p)
+        logout: (...p) => auth0Client.logout(...p),
       }}
     >
       {children}

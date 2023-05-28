@@ -8,22 +8,22 @@ const styles = {
     borderRadius: 55,
     padding: '3vw',
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   cardImage: {
     height: '100%',
     objectFit: 'cover',
-    borderRadius: 55
+    borderRadius: 55,
   },
   cardTitle: {
-    fontSize: '4vmin'
+    fontSize: '4vmin',
   },
   cardText: {
-    fontSize: '2.5vmin'
-  }
+    fontSize: '2.5vmin',
+  },
 };
 
-const FindingsCard = props => {
+const FindingsCard = (props) => {
   return (
     <Card className="mt-5 border-0 shadow" style={styles.card}>
       <Row>

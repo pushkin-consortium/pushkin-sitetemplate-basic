@@ -13,8 +13,8 @@ const styles = {
     margin: '0px',
     position: 'absolute',
     bottom: '0',
-    fontSize: '22px'
-  }
+    fontSize: '22px',
+  },
 };
 
 class Footer extends Component {

@@ -18,7 +18,7 @@ export default function AboutPage(props) {
             backgroundImage: `url(${headerImage})`,
             backgroundPosition: 'center center',
             marginBottom: '0px',
-            borderRadius: '0'
+            borderRadius: '0',
           }}
         >
           <h1 className="justify-content-center">Who We Are</h1>
@@ -35,7 +35,7 @@ export default function AboutPage(props) {
           </Row>
           <hr style={{ marginBottom: '0px' }} />
           <Row>
-            {people.map(p => {
+            {people.map((p) => {
               return (
                 <TeamMember
                   name={p.name}

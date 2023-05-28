@@ -1,8 +1,9 @@
 // ./src/index.js
 
-// Some legacy browser support
-import 'react-app-polyfill/ie9';
-import 'react-app-polyfill/stable';
+// This was used by create-react-app to support some legacy browsers.
+// Not available now that we've dropped create-react-app
+//import 'react-app-polyfill/ie9';
+//import 'react-app-polyfill/stable';
 
 // Basic react imports
 import React from 'react';
@@ -34,7 +35,7 @@ sagaMiddleware.run(rootSaga);
 
 // A function that routes the user to the right place
 // after login
-const onRedirectCallback = appState => {
+const onRedirectCallback = (appState) => {
   customHistory.push(
     appState && appState.targetUrl
       ? appState.targetUrl
@@ -44,10 +45,10 @@ const onRedirectCallback = appState => {
 
 //Renders the front end
 render(
-    <Provider store={store}>
-      <Router history={customHistory}>
-        <App />
-      </Router>
-    </Provider>,
+  <Provider store={store}>
+    <Router history={customHistory}>
+      <App />
+    </Router>
+  </Provider>,
   document.getElementById('root')
 );

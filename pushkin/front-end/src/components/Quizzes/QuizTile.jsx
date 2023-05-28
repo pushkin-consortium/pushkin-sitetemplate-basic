@@ -11,7 +11,7 @@ import { StyleSheet, css } from 'aphrodite';
 
 class QuizTile extends Component {
   state = {
-    count: null
+    count: null,
   };
 
   //  componentDidMount() {
@@ -35,18 +35,18 @@ class QuizTile extends Component {
       card: {
         backgroundColor: '#B7E0F2',
         borderRadius: 55,
-        padding: '1rem'
+        padding: '1rem',
       },
       cardTitle: {
         fontSize: 26,
-        fontWeight: 600
-      }
+        fontWeight: 600,
+      },
     };
 
     const hoverStyles = StyleSheet.create({
       cardImage: {
         width: '100%',
-        objectFit: 'cover'
+        objectFit: 'cover',
       },
       cardButton: {
         backgroundColor: '#FF6200',
@@ -54,26 +54,26 @@ class QuizTile extends Component {
         border: 0,
         ':hover': {
           backgroundColor: '#FFAF7D',
-          transition: '0.3s'
-        }
+          transition: '0.3s',
+        },
       },
       socialIcon: {
         height: 40,
         width: 40,
         margin: 3,
-        opacity: 1
+        opacity: 1,
       },
       opacityStyle: {
         opacity: 1,
         ':hover': {
           cursor: 'pointer',
           opacity: 0.6,
-          transition: '0.3s'
-        }
+          transition: '0.3s',
+        },
       },
       circleStyle: {
-        borderRadius: '50%'
-      }
+        borderRadius: '50%',
+      },
     });
 
     // Generate sharing links
@@ -98,7 +98,7 @@ class QuizTile extends Component {
         var top = (window.screen.height - 570) / 2;
         var params = `menubar=no,toolbar=no,status=no,width=570,height=570,top=${top},left=${left}`;
         window.open(url, 'NewWindow', params);
-      }
+      },
     };
 
     return (
@@ -144,7 +144,7 @@ class QuizTile extends Component {
           <Row className="justify-content-center mt-3 mb-3">
             <i.SocialIcon
               url={share.facebook}
-              onClick={e => {
+              onClick={(e) => {
                 e.preventDefault();
                 share.open(share.facebook);
               }}
@@ -153,7 +153,7 @@ class QuizTile extends Component {
             />
             <i.SocialIcon
               url={share.twitter}
-              onClick={e => {
+              onClick={(e) => {
                 e.preventDefault();
                 share.open(share.twitter);
               }}
