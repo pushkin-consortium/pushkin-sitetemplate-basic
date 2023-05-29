@@ -9,6 +9,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Router } from 'react-router-dom';
+import { CompatRouter } from 'react-router-dom-v5-compat';
 
 // redux
 import { Provider } from 'react-redux';
@@ -47,7 +48,9 @@ const onRedirectCallback = (appState) => {
 render(
   <Provider store={store}>
     <Router history={customHistory}>
-      <App />
+      <CompatRouter>
+        <App />
+      </CompatRouter>
     </Router>
   </Provider>,
   document.getElementById('root')

@@ -1,8 +1,8 @@
 // Global configuration file
 
-import util from 'util';
-import jsYaml from 'js-yaml';
-import fs from 'fs';
+//import util from 'util'; // Doesn't appear to be used anymore
+//import jsYaml from 'js-yaml'; // Doesn't appear to be used anymore
+//import fs from 'fs'; // Doesn't appear to be used anymore
 import { pushkinConfig } from './.pushkin.js'
 import { debug } from './.env.js'
 
