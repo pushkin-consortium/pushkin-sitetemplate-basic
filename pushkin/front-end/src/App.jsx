@@ -17,8 +17,6 @@ import homePage from './pages/Home';
 import findingsPage from './pages/Findings';
 import aboutPage from './pages/About';
 import feedbackPage from './pages/Feedback';
-import dashboardPage from './pages/dashboard/Dashboard';
-import forumPage from './pages/Forum';
 
 function App() {
   return (

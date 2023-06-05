@@ -13,7 +13,6 @@ import { Nav, Navbar, Button, Image } from 'react-bootstrap';
 
 //other
 import { CONFIG } from '../../config';
-import { useAuth0 } from '../../utils/react-auth0-spa';
 
 const mapStateToProps = (state) => {
   return {

@@ -13,4 +13,9 @@ export default defineConfig({
       targets: ['defaults', 'not IE <=11'],
     }),
   ],
+  server: {
+    fs: {
+      allow: ['src/.env.js'],
+    },
+  },
 });
