@@ -19,7 +19,7 @@ const mapStateToProps = state => {
 const TakeQuiz = (props) => {
   let { quizName } = useParams()
   const QuizComponent = expObject[quizName];
-  console.log(CONFIG.apiEndpoint.concat(quizName))
+  console.log(CONFIG.apiEndpoint.concat('/').concat(quizName))
   return (
     <div>
       <QuizComponent {...props} api={CONFIG.apiEndpoint.concat('/').concat(quizName)} />
